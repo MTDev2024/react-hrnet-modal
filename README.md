@@ -1,16 +1,131 @@
-# React + Vite
+# Modal Component (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, accessible, and reusable confirmation modal component for React applications.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Controlled visibility (`isOpen`)
+* Close on:
 
-## React Compiler
+  * Overlay click
+  * Escape key press
+  * Close button click
+* Optional title support
+* Fully composable content via `children`
+* Clean and minimal API
+* Built with React hooks (`useEffect`, `useCallback`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install react-modal-mtdev2024
+```
+
+ou
+
+```bash
+yarn add react-modal-mtdev2024
+```
+
+---
+
+## Usage
+
+```jsx
+import { useState } from "react";
+import Modal from "your-package-name";
+
+function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setIsOpen(true)}>Open Modal</button>
+
+      <Modal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="Confirmation"
+      >
+        <p>Example</p>
+      </Modal>
+    </>
+  );
+}
+```
+
+---
+
+## Props
+
+| `isOpen`   | `boolean`   | Required | Controls the visibility of the modal |
+| `onClose`  | `function`  | Required | Callback triggered when modal closes |
+| `children` | `ReactNode` | Required | Content inside the modal             |
+| `title`    | `string`    | Optional | Optional modal title                 |
+
+---
+
+## Behavior
+
+* Clicking outside the modal (overlay) closes it
+* Pressing the `Escape` key closes it
+* Clicking inside the modal does **not** close it (event propagation is stopped)
+* Modal is not rendered at all when `isOpen` is `false`
+
+---
+
+## Styling
+
+This component is unstyled by default except for class names.
+You can fully customize it using CSS:
+
+```css
+.modal-overlay {
+
+}
+
+.modal-content {
+  
+}
+
+.modal-title {
+  
+}
+
+.modal-close {
+  
+}
+```
+
+---
+
+## Implementation Details
+
+* Uses `useEffect` to handle global keyboard events
+* Uses `useCallback` to prevent unnecessary re-renders
+* Cleans up event listeners properly to avoid memory leaks
+
+---
+
+## Improvements to consider
+
+* Add `role="dialog"` and `aria-modal="true"`
+* Trap focus inside the modal
+* Manage initial focus when opening
+
+---
+
+## PropTypes
+
+The component includes runtime type checking via `prop-types`.
+
+---
+
+## License
+
+MTDev
+
+---
+

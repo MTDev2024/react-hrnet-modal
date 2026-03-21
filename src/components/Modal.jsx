@@ -29,8 +29,18 @@ function Modal({ isOpen, onClose, children, title }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        {title && <h2 className="modal-title">{title}</h2>}
+      <div
+        className="modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={title ? "modal-title" : undefined}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {title && (
+          <h2 id="modal-title" className="modal-title">
+            {title}
+          </h2>
+        )}
         {children}
         <button className="modal-close" onClick={onClose}>
           Close
