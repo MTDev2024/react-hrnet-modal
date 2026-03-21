@@ -78,25 +78,17 @@ function App() {
 
 ## Styling
 
-This component is unstyled by default except for class names.
-You can fully customize it using CSS:
+The component comes with a default stylesheet. Import it in your project:
+```jsx
+import 'react-modal-mtdev2024/dist/Modal.css'
+```
 
+You can override the default styles using these CSS classes:
 ```css
-.modal-overlay {
-
-}
-
-.modal-content {
-  
-}
-
-.modal-title {
-  
-}
-
-.modal-close {
-  
-}
+.modal-overlay { }
+.modal-content { }
+.modal-title { }
+.modal-close { }
 ```
 
 ---
