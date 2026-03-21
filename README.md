@@ -60,10 +60,13 @@ function App() {
 
 ## Props
 
-| `isOpen`   | `boolean`   | Required | Controls the visibility of the modal |
-| `onClose`  | `function`  | Required | Callback triggered when modal closes |
-| `children` | `ReactNode` | Required | Content inside the modal             |
-| `title`    | `string`    | Optional | Optional modal title                 |
+
+| Prop       | Type        | Required ? | Description                          |
+| ---------- | ----------- | ---------- | ------------------------------------ |
+| `isOpen`   | `boolean`   |     Yes    | Controls the visibility of the modal |
+| `onClose`  | `function`  |     Yes    | Callback triggered when modal closes |
+| `children` | `ReactNode` |     Yes    | Content inside the modal             |
+| `title`    | `string`    |     No     | Optional modal title                 |
 
 ---
 
