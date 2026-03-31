@@ -14,28 +14,27 @@ A lightweight, accessible, and reusable confirmation modal component for React a
 * Fully composable content via `children`
 * Clean and minimal API
 * Built with React hooks (`useEffect`, `useCallback`)
+* ARIA attributes for accessibility (`role="dialog"`, `aria-modal`, `aria-labelledby`)
 
 ---
 
 ## Installation
-
 ```bash
-npm install react-modal-mtdev2024
+npm install modal-mtdev2024
 ```
 
 ou
-
 ```bash
-yarn add react-modal-mtdev2024
+yarn add modal-mtdev2024
 ```
 
 ---
 
 ## Usage
-
 ```jsx
 import { useState } from "react";
-import Modal from "your-package-name";
+import Modal from "modal-mtdev2024";
+import "modal-mtdev2024/style.css";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,7 +59,6 @@ function App() {
 
 ## Props
 
-
 | Prop       | Type        | Required ? | Description                          |
 | ---------- | ----------- | ---------- | ------------------------------------ |
 | `isOpen`   | `boolean`   |     Yes    | Controls the visibility of the modal |
@@ -83,7 +81,7 @@ function App() {
 
 The component comes with a default stylesheet. Import it in your project:
 ```jsx
-import 'react-modal-mtdev2024/dist/Modal.css'
+import "modal-mtdev2024/style.css";
 ```
 
 You can override the default styles using these CSS classes:
@@ -106,9 +104,9 @@ You can override the default styles using these CSS classes:
 
 ## Improvements to consider
 
-* Add `role="dialog"` and `aria-modal="true"`
 * Trap focus inside the modal
 * Manage initial focus when opening
+* Add sr-only support for screen readers
 
 ---
 
@@ -120,7 +118,4 @@ The component includes runtime type checking via `prop-types`.
 
 ## License
 
-MTDev
-
----
-
+MIT © MTDev2024
