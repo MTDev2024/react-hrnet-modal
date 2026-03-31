@@ -4,11 +4,13 @@
   "description": "A lightweight and accessible React modal component",
   "main": "./dist/modal-mtdev2024.umd.cjs",
   "module": "./dist/modal-mtdev2024.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/MTDev2024/react-hrnet-modal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MTDev2024/react-hrnet-modal"
+    "url": "git+https://github.com/MTDev2024/react-hrnet-modal.git"
   },
   "exports": {
     ".": {
@@ -42,7 +44,13 @@
     "globals": "^17.4.0",
     "vite": "^8.0.1"
   },
-  "keywords": ["react", "modal", "dialog", "accessible", "component"],
+  "keywords": [
+    "react",
+    "modal",
+    "dialog",
+    "accessible",
+    "component"
+  ],
   "author": "MTDev2024",
   "license": "MIT"
 }
