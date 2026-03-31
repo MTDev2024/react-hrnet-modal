@@ -1,6 +1,6 @@
 {
   "name": "modal-mtdev2024",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight and accessible React modal component",
   "main": "./dist/modal-mtdev2024.umd.cjs",
   "module": "./dist/modal-mtdev2024.js",
