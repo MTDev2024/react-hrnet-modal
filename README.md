@@ -112,9 +112,10 @@ You can override the default styles using these CSS classes:
 
 ## PropTypes
 
-The component includes runtime type checking via `prop-types`.
-
----
+The component uses `prop-types` for runtime type checking. Make sure to install it in your project:
+```bash
+npm install prop-types
+```
 
 ## License
 

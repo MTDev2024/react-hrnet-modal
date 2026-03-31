@@ -1,6 +1,6 @@
 {
   "name": "modal-mtdev2024",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightweight and accessible React modal component",
   "main": "./dist/modal-mtdev2024.umd.cjs",
   "module": "./dist/modal-mtdev2024.js",
@@ -15,9 +15,7 @@
 "exports": {
   ".": {
     "import": "./dist/modal-mtdev2024.js",
-    "require": "./dist/modal-mtdev2024.umd.cjs",
-    "browser": "./dist/modal-mtdev2024.js",
-    "default": "./dist/modal-mtdev2024.js"
+    "require": "./dist/modal-mtdev2024.umd.cjs"
   },
   "./style.css": "./dist/modal-mtdev2024.css"
 },
@@ -30,11 +28,10 @@
   },
   "peerDependencies": {
     "react": ">=17.0.0",
-    "react-dom": ">=17.0.0"
-  },
-  "dependencies": {
+    "react-dom": ">=17.0.0",
     "prop-types": "^15.8.1"
   },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.39.4",
     "@types/react": "^19.2.14",
