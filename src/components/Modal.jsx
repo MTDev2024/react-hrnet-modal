@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useEffect, useCallback } from "react";
 
 /**
@@ -49,12 +48,5 @@ function Modal({ isOpen, onClose, children, title }) {
     </div>
   );
 }
-
-Modal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired,
-  title: PropTypes.string,
-};
 
 export default Modal;

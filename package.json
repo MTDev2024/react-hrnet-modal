@@ -1,6 +1,6 @@
 {
   "name": "modal-mtdev2024",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight and accessible React modal component",
   "main": "./dist/modal-mtdev2024.umd.cjs",
   "module": "./dist/modal-mtdev2024.js",
@@ -12,13 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/MTDev2024/react-hrnet-modal.git"
   },
-"exports": {
-  ".": {
-    "import": "./dist/modal-mtdev2024.js",
-    "require": "./dist/modal-mtdev2024.umd.cjs"
+  "exports": {
+    ".": {
+      "import": "./dist/modal-mtdev2024.js",
+      "require": "./dist/modal-mtdev2024.umd.cjs"
+    },
+    "./style.css": "./dist/modal-mtdev2024.css"
   },
-  "./style.css": "./dist/modal-mtdev2024.css"
-},
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -28,8 +28,7 @@
   },
   "peerDependencies": {
     "react": ">=17.0.0",
-    "react-dom": ">=17.0.0",
-    "prop-types": "^15.8.1"
+    "react-dom": ">=17.0.0"
   },
   "dependencies": {},
   "devDependencies": {

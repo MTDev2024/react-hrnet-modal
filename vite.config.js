@@ -11,12 +11,11 @@ export default defineConfig({
       fileName: "modal-mtdev2024", // nom des fichiers générés dans dist/
     },
     rollupOptions: {
-      external: ["react", "react-dom", "prop-types"], // pas inclus dans le bundle
+      external: ["react", "react-dom"], // pas inclus dans le bundle
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
-          "prop-types": "PropTypes",
         },
       },
     },
