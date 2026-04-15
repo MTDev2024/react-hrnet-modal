@@ -6,15 +6,15 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
-      <h1>Test Modal</h1>
-      <button onClick={() => setIsOpen(true)}>Ouvrir la modale</button>
+    <div style={{ padding: "2rem" }}>
+      <h1>modal-mtdev2024 — Demo</h1>
+      <button onClick={() => setIsOpen(true)}>Open Modal</button>
       <Modal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         title="Confirmation"
       >
-        Employee Created!
+        <p>Employee created successfully!</p>
       </Modal>
     </div>
   );

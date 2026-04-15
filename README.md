@@ -111,6 +111,7 @@ You can override the default styles using these CSS classes:
 ---
 
 ## Type Documentation
+
 Props are documented using JSDoc comments directly in the source code.
 No runtime type checking dependency required.
 ```
